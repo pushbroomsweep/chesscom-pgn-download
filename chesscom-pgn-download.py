@@ -31,7 +31,7 @@ for i in range(0,len(monthlist)):
     print(monthlist[i])
     url_string = "https://api.chess.com/pub/player/" + username + "/games/" + monthlist[i] + "/pgn"
     r = requests.get(url_string)
-    with open(fname,'a') as f:
+    with open(fname,'ab') as f:
         f.write(r.content)
     f.close()
 
